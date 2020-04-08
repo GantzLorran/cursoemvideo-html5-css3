@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<link href="css/css.css" rel="stylesheet" type="text/css"/>
+	<link href="css/form.css" rel="stylesheet" type="text/css"/>
+	<title> Universo Game </title>
+	<style>
+	h1{
+		font-family: Arial;
+		color: blue;
+		font-size: 30pt;
+		text-shadow: 2px 2px 2px black;
+	}
+	</style>
+	<script language="javascript">
+		function mudaFoto(foto){
+			document.getElementById("icone").src = foto;
+		}
+	</script>
+</head>
+<body>
+<div id="interface">
+	<header id="cabecalho">
+	<img id="icone" src="imagens/img2.jpg">
+		<nav id="menu">
+			<ul>
+			<h1>Menu Principal</h1>
+			<li onmouseover="mudaFoto('imagens/img3.png')" onmouseout="mudaFoto('imagens/img2.jpg')"> <a href="aula1.html">Inicio</a> </li>
+			<li onmouseover="mudaFoto('imagens/img6.png')" onmouseout="mudaFoto('imagens/img2.jpg')"> <a href="jogos.html">Jogos</a> </li>
+			<li onmouseover="mudaFoto('imagens/img5.jpg')" onmouseout="mudaFoto('imagens/img2.jpg')"> <a href="consoles.html">Consoles</a> </li>
+			<li onmouseover="mudaFoto('imagens/img14.jpg')" onmouseout="mudaFoto('imagens/img2.jpg')"> <a href="acessorios.html">Acessórios</a> </li>
+			<li onmouseover="mudaFoto('imagens/img3.png')" onmouseout="mudaFoto('imagens/img2.jpg')"> <a href="colecionaveis.html">Colecionáveis</a> </li>
+			<li onmouseover="mudaFoto('imagens/img20.png')" onmouseout="mudaFoto('imagens/img2.jpg')"> <a href="faleconosco.html">fale conosco</a> </li>
+			</ul>
+		</nav>
+	</header>
+	<h1 class="mySlides w3-animate-left">Olá, mundo!</h1>
+	<figure class="foto-legenda">
+	<img class="img1" src="imagens/gow4.jpg">
+	<figcaption>
+	<h2> God of war 4 </h2>
+	<p> O jogo do ano <a href="https://www.techtudo.com.br/noticias/2018/12/the-game-awards-2018-confira-os-vencedores-e-anuncios-da-premiacao.ghtml" target="_blank">clique para ver mais informações</a> </p>
+	</figcaption>
+	</figure>
+	</div>
+	<h1>The Game Awards 2018: God of War é o Jogo do Ano; veja os vencedores</h1>
+	<table id="tabelaspec">
+	<caption>
+	<tr> <td>TGA 2018, o 'Oscar dos videogames', premiou God of War como Jogo do Ano de 2018 e anunciou títulos inéditos<td> </tr>
+	</caption>
+	</table>
+</body>
+<footer>
+	&reg by Lorran!
+</footer>
+</html>

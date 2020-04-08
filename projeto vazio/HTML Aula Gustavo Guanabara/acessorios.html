@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<link href="css/css.css" rel="stylesheet" type="text/css"/>
+		<link href="css/fotos.css" rel="stylesheet" type="text/css">
+	<title> Universo Game </title>
+	<style>
+	h1{
+		font-family: Arial;
+		color: blue;
+		font-size: 30pt;
+		text-shadow: 2px 2px 2px black;
+	}
+	</style>
+	<script language="javascript">
+		function mudaFoto(foto){
+			document.getElementById("icone").src = foto;
+		}
+	</script>
+</head>
+<body>
+<div id="interface">
+	<header id="cabecalho">
+	<img id="icone" src="imagens/img2.jpg">
+		<nav id="menu">
+			<ul>
+			<h1>Menu Principal</h1>
+			<li onmouseover="mudaFoto('imagens/img3.png')" onmouseout="mudaFoto('imagens/img14.jpg')"> <a href="aula1.html">Inicio</a> </li>
+			<li onmouseover="mudaFoto('imagens/img6.png')" onmouseout="mudaFoto('imagens/img14.jpg')"> <a href="jogos.html">Jogos</a> </li>
+			<li onmouseover="mudaFoto('imagens/img5.jpg')" onmouseout="mudaFoto('imagens/img14.jpg')"> <a href="consoles.html">Consoles</a> </li>
+			<li onmouseover="mudaFoto('imagens/img14.jpg')" onmouseout="mudaFoto('imagens/img14.jpg')"> <a href="acessorios.html">Acessórios</a> </li>
+			<li onmouseover="mudaFoto('imagens/img3.png')" onmouseout="mudaFoto('imagens/img14.jpg')"> <a href="colecionaveis.html">Colecionáveis</a> </li>
+			<li onmouseover="mudaFoto('imagens/img3.png')" onmouseout="mudaFoto('imagens/img14.jpg')"> <a href="faleconosco.html">fale conosco</a> </li>
+			</ul>
+		</nav>
+	</header>
+<section id="">
+		<article id="">
+			<header id="">
+	<p> Veja nossos acessórios para PS4, Xbox ONE e PC</p>
+		<ul id="albumacessorios">
+			<li id="foto01"><span>Acessórios PS4</span></li>
+			<li id="foto02"><span>Acessórios Xbox ONE</span></li>
+			<li id="foto03"><span>Cartões PS4</span></li>
+			<li id="foto04"><span>Cartões Xbox ONE</span></li>
+			<li id="foto05"><span>Acessórios PC</span></li>
+		</ul>
+		</article>
+</section>
+	</body>
+<footer>
+	&reg by Lorran!
+</footer>
+</html>

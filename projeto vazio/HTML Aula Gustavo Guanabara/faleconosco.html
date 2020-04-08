@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<link href="css/css.css" rel="stylesheet" type="text/css"/>
+		<link href="css/form.css" rel="stylesheet" type="text/css">
+	<title> Universo Game </title>
+	<style>
+	h1{
+		font-family: Arial;
+		color: blue;
+		font-size: 30pt;
+		text-shadow: 2px 2px 2px black;
+	}
+	</style>
+	<script language="javascript">
+		function mudaFoto(foto){
+			document.getElementById("icone").src = foto;
+		}
+	</script>
+	<script>
+		function calc_total() {
+			var qtd = parseInt(document.getElementById('cQtd').value);
+			tot = qtd * 250;
+			document.getElementById('cTot').value = tot;
+		}
+		function mostrasenha(){
+			var tipo = document.getElementById("cSenha");
+			if(tipo.type == "password"){
+				tipo.type = "text";
+			}else{
+				tipo.type = "password";
+			}
+		}
+	</script>
+</head>
+<body>
+<div id="interface">
+	<header id="cabecalho">
+	<img id="icone" src="imagens/img2.jpg">
+		<nav id="menu">
+			<ul>
+			<h1>Menu Principal</h1>
+			<li onmouseover="mudaFoto('imagens/img3.png')" onmouseout="mudaFoto('imagens/img20.png')"> <a href="aula1.html">Inicio</a> </li>
+			<li onmouseover="mudaFoto('imagens/img6.png')" onmouseout="mudaFoto('imagens/img20.png')"> <a href="jogos.html">Jogos</a> </li>
+			<li onmouseover="mudaFoto('imagens/img5.jpg')" onmouseout="mudaFoto('imagens/img20.png')"> <a href="consoles.html">Consoles</a> </li>
+			<li onmouseover="mudaFoto('imagens/img14.jpg')" onmouseout="mudaFoto('imagens/img20.png')"> <a href="acessorios.html">Acessórios</a> </li>
+			<li onmouseover="mudaFoto('imagens/img3.png')" onmouseout="mudaFoto('imagens/img20.png')"> <a href="colecionaveis.html">Colecionáveis</a> </li>
+			<li onmouseover="mudaFoto('imagens/img20.png')" onmouseout="mudaFoto('imagens/img20.png')"> <a href="faleconosco.html">fale conosco</a> </li>
+			</ul>
+		</nav>
+	</header>
+	
+	<form method="post" id="fContato" action="mailto:lorranrodrigues553@gmail.com" oninput="calc_total();">
+		<fieldset id="usuario"> <legend>Dados do usuário</legend>
+			<p>Nome:<input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Nome completo"/></p>
+			<p>Senha:<input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="senha"/>
+			</p><button type="button" onclick="mostrasenha()">Apresentar Senha</button>
+			<p>E-mail:<input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="E-mail"/></p>
+			<p>Telefone:<input type="text" name="tNumero" id="cNumero" size="10" maxlength="10" placeholder="Telefone"/></p>
+			<p>Celular:<input type="text" name="tCelular" id="cCelular" size="11" maxlength="11" placeholder="Celular"/></p>
+			<p>RG:<input type="text" name="tRg" id="cRg" size="20" maxlength="30" placeholder="RG"/></p>
+			<p>CPF:<input type="text" name="tCpf" id="cCpf" size="11" maxlength="11" placeholder="CPF"/></p>
+			<fieldset id="sexo"><legend>Sexo:<legend>
+				<input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label><br>
+				<input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label></fieldset>
+			<p>Data de nascimento:<input type="date" name="tNasc" id="cNasc"/></p>
+		</fieldset>
+		<fieldset id="endereco"><legend>Endereço</legend>
+			<p>Logradouro:<input type="text" name="tLog" id="cLog" size="8" maxlength="80" placeholder="Rua, Av, Trav..."/></p>
+			<p>Número:<input type="number" name="tNumero" id="cNumero" size="0" maxlength="999999" placeholder="Numero"/></p>
+			<p>Estado:<input type="text" name="tEst" id="cEst" size="0" maxlength="50" placeholder="Estado"/>
+			<select name="tEst" id="cEst">
+				<optgroup label="regiao sudeste">
+					<option value="rj"> Rio de Janeiro </option>
+					<option value="sp"> São Paulo </option>
+					<option value="mg"> Minas Gerias </option>
+				</optgroup>
+				<optgroup label="regiao sul">
+					<option value="pr"> Paraná </option>
+					<option value="sc"> Santa Catarina </option>
+					<option value="rs"> Rio Grande do sul </option>
+				</optgroup>
+			</select>
+			</p>
+			<p>Cidade:<input type="text" name="tCidade" id="cCidade" size="20" maxlength="50" placeholder="Cidade" list="cidades"/></p>
+			<datalist id="cidades">
+				<option value="rio de janeiro"></option>
+				<option value="nova iguaçu"></option>
+				<option value="niteroi"></option>
+				<option value="belford roxo"></option>
+			</datalist>
+		</fieldset>
+		
+		<fieldset id="mensagem"><legend>Mensagem do usuário</legend>
+			<p>Assunto:<input type="text" name="tAssunto" id="cAssunto" size="0" maxlength="90" placeholder="Assunto"/>
+			<input type="ranger" name="tUrg" id="cUrg" min="0" max="10"/></p> 
+			<p>Mensagem:<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite aqui sua mensagem"></textarea></p>
+		</fieldset>
+			<fieldset id="jogo"><legend>Comprar um Jogo</legend>
+			<p><label for="cCor">Cor:</label><input type="color" name="tCor" id="cCor" value="#0000FF"/></p>
+			<p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="1000" value="0"/></p>
+			<p><label for="cTot">Preço Total:</label><input type="text" name="tTot" id="cTot" min="0" max="1000" placeholder="Total a Pagar" readonly/></p>
+			</fieldset>
+		<input type="submit" value="Enviar"/>
+</form>
+</body>
+<footer>
+	&reg by Lorran!
+</footer>
+</html>
